@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EI7-hh-Udk">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="0vo-51-Wyw">
+            <objects>
+                <viewController id="EI7-hh-Udk" customClass="GDWWelcomeViewController" customModule="新浪微博" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wx2-wn-MX7"/>
+                        <viewControllerLayoutGuide type="bottom" id="jP1-GF-Lib"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tzx-b9-DzX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ad_background" translatesAutoresizingMaskIntoConstraints="NO" id="bTn-6R-vlp">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_default_big" translatesAutoresizingMaskIntoConstraints="NO" id="yVR-hW-JY1" userLabel="头像">
+                                <rect key="frame" x="255" y="350" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="4Z9-3j-Icu"/>
+                                    <constraint firstAttribute="height" constant="90" id="T4G-RJ-PTM"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎回来" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUr-87-exE">
+                                <rect key="frame" x="256" y="460" width="88" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jP1-GF-Lib" firstAttribute="top" secondItem="yVR-hW-JY1" secondAttribute="bottom" constant="160" id="4ga-cP-jSf"/>
+                            <constraint firstItem="jP1-GF-Lib" firstAttribute="top" secondItem="bTn-6R-vlp" secondAttribute="bottom" id="6o0-Dl-aTP"/>
+                            <constraint firstItem="bTn-6R-vlp" firstAttribute="leading" secondItem="Tzx-b9-DzX" secondAttribute="leading" id="FQB-FJ-KSh"/>
+                            <constraint firstAttribute="trailing" secondItem="bTn-6R-vlp" secondAttribute="trailing" id="Iac-72-ZXT"/>
+                            <constraint firstItem="CUr-87-exE" firstAttribute="centerX" secondItem="yVR-hW-JY1" secondAttribute="centerX" id="cez-Tt-7tV"/>
+                            <constraint firstItem="yVR-hW-JY1" firstAttribute="centerX" secondItem="Tzx-b9-DzX" secondAttribute="centerX" id="iDo-Ml-Z9X"/>
+                            <constraint firstItem="CUr-87-exE" firstAttribute="top" secondItem="yVR-hW-JY1" secondAttribute="bottom" constant="20" id="me9-A5-Pxp"/>
+                            <constraint firstItem="bTn-6R-vlp" firstAttribute="top" secondItem="Tzx-b9-DzX" secondAttribute="top" id="oIi-1v-EP0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="iconBottomCons" destination="4ga-cP-jSf" id="7ye-uV-K8q"/>
+                        <outlet property="iconView" destination="yVR-hW-JY1" id="MeK-iF-ko5"/>
+                        <outlet property="tipLabel" destination="CUr-87-exE" id="2vT-rs-4fg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P9o-Py-UAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="306" y="314"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ad_background" width="320" height="480"/>
+        <image name="avatar_default_big" width="85" height="85"/>
+    </resources>
+</document>
